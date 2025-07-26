@@ -1,7 +1,6 @@
-
 package pack;
 
-public class MyLinkedList {
+public class MyLinkedList_671755 {
 
     protected Node head;
 
@@ -17,7 +16,7 @@ public class MyLinkedList {
         
     }
 
-    public MyLinkedList(){
+    public MyLinkedList_671755(){
         this.head=null;
     }
 
