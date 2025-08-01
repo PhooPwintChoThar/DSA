@@ -83,9 +83,13 @@ static void array_demo_5() {
          arrayBasic_demo_3();
          System.out.println("calling demo_4");
          array_demo_4();
-        System.out.println("calling demo_5");
+        System.out.println("calling demo_5 ");
         array_demo_5();
-        System.out.println("calling demo_6");
+        System.out.println("calling demo_6 1st time");
+        array_demo_6();
+        System.out.println("calling demo_6 2nd time");
+        array_demo_6();
+        System.out.println("calling demo_6 3rd time");
         array_demo_6();
     }
 
