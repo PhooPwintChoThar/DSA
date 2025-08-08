@@ -2,7 +2,7 @@ package Lab05;
 
 import java.util.StringTokenizer;
 
-import Lab05.pack.MyRPN;
+import Lab05.pack.MyRPN_671755;
 import Lab05.pack.MyStack671755;
 
 public class Lab05_671755 {
@@ -27,7 +27,7 @@ public class Lab05_671755 {
     }
     static void demo_2() {
         String postfixString = "8 5 - 4 2 + 3 / *";
-        System.out.println(postfixString + " = " + MyRPN.computeRPN(postfixString));
+        System.out.println(postfixString + " = " + MyRPN_671755.computeRPN(postfixString));
     }
     public static void main(String[] args) {
         demo_0();
