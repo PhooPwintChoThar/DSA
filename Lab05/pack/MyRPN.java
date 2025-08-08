@@ -3,7 +3,7 @@ package Lab05.pack;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
-public class MyRPN {
+public class MyRPN_671755 {
 
     private static Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 
