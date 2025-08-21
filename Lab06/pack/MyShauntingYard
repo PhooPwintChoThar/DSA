@@ -1,0 +1,46 @@
+package Lab06.pack;
+
+import java.util.Stack;
+
+public class MyShauntingYard {
+    private static int order(String c) {
+        return switch (c) {
+            case "+", "-" -> 1;
+            case "*", "/" -> 2;
+            default -> 0;
+        };
+    }
+
+    public static String infixToPostfix(String infixString) {
+        StringBuilder output = new StringBuilder();
+        Stack<String> stack = new Stack<>();
+
+        String[] tokens = infixString.split("\\s+"); // split by spaces
+
+        for (String token : tokens) {
+            if (token.matches("\\d+")) { // number
+                output.append(token).append(" ");
+            } else if (token.equals("(")) {
+                stack.push(token);
+            } else if (token.equals(")")) {
+                while (!stack.isEmpty() && !stack.peek().equals("(")) {
+                    output.append(stack.pop()).append(" ");
+                }
+                if (!stack.isEmpty() && stack.peek().equals("(")) {
+                    stack.pop(); // discard "("
+                }
+            } else { // operator
+                while (!stack.isEmpty() && order(stack.peek()) >= order(token)) {
+                    output.append(stack.pop()).append(" ");
+                }
+                stack.push(token);
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            output.append(stack.pop()).append(" ");
+        }
+
+        return output.toString().trim();
+    }
+}
